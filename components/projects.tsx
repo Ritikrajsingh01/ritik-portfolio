@@ -19,7 +19,7 @@ const projects: Project[] = [
     tech: ["C++", "MySQL", "Python"],
     highlight: "Reduced manual data errors by 40% and improved operational speed",
     date: "May 2025",
-    link: "https://github.com/yourusername/hospital-management-system", // ← Add your link here
+    link: "https://hospital-management-swart-five.vercel.app/", // ← Add your link here
   },
 ]
 
