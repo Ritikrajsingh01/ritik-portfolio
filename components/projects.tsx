@@ -8,6 +8,7 @@ interface Project {
   tech: string[]
   highlight: string
   date: string
+  link: string
 }
 
 const projects: Project[] = [
@@ -18,6 +19,7 @@ const projects: Project[] = [
     tech: ["C++", "MySQL", "Python"],
     highlight: "Reduced manual data errors by 40% and improved operational speed",
     date: "May 2025",
+    link: "https://github.com/yourusername/hospital-management-system", // ← Add your link here
   },
 ]
 
@@ -35,11 +37,14 @@ export default function Projects() {
 
         <div className="space-y-8">
           {projects.map((project, idx) => (
-            <div
+            <a
               key={idx}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="group relative"
+              className="group relative block"
             >
               {/* Background glow effect */}
               <div
@@ -75,7 +80,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
